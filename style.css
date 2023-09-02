@@ -21,11 +21,11 @@
 
 /* Login Form */
 #login-body {
-    background: url(/assets/3334896.jpg) no-repeat center / cover;
+    background: url(assets/3334896.jpg) no-repeat center / cover;
     height: auto;
 }
 #bg-image {
-    background: url(/assets/download.jpg) no-repeat center / cover;
+    background: url(assets/download.jpg) no-repeat center / cover;
 }
 .btn {
     transition-duration: 0.6s;
@@ -59,7 +59,7 @@
     background: linear-gradient(135deg, rgba(36, 35, 80, 1) 0%, rgba(44, 71, 87, 1) 100%);
 }
 #main-container {
-    background: url(/assets/images.jpg) no-repeat center / cover;
+    background: url(assets/images.jpg) no-repeat center / cover;
 }
 .btn-reset {
     transition-duration: 0.8s;
