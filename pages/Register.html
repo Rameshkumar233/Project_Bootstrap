@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register - New user</title>
+        <!-- Bootstrap for CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <!-- Fontawesome Icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    </head>
+
+    <body id="register-body">
+        <!-- Breadcrumb -->
+        <div class="container my-2">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/pages/index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/pages/about.html">About</a></li>
+                <li class="breadcrumb-item"><a href="/pages/login.html">Log in</a></li>
+                <li class="breadcrumb-item active">Register</li>
+            </ol>
+        </div>
+        <!-- New registration form -->
+        <section>
+            <div class="container-lg mb-4" id="mainf-container">
+                <div class="row">
+                    <div class="col-8 m-auto">
+                        <!-- card -->
+                        <div class="card my-4">
+                            <h5 class="card-header text-center text-light bg-success">Register as a New User</h5>
+                            <!-- card body -->
+                            <div class="card-body">
+                                <!-- Form Start -->
+                                <form class="" action="/" method="POST" novalidate>
+                                    <!-- Name -->
+                                    <div class="mb-2 col-12">
+                                        <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                            <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter Your Full name" required />
+                                        </div>
+
+                                        <div class="valid-feedback">Looks Good</div>
+                                        <div class="invalid-feedback">Enter your Fullname</div>
+                                        <div id="nameHelp" class="form-text">Max. characters upto 25</div>
+                                    </div>
+                                    <!-- Gender Radio button and DOB grid-->
+                                    <div class="row g-2 mb-2">
+                                        <!-- Gender Radio button -->
+                                        <div class="col-md-6">
+                                            <label for="gender" class="form-label">Gender <span class="text-danger">*</span></label>
+                                            <!-- Gender on inline -->
+                                            <div class="form-check align-items-center">
+                                                <div class="form-check-inline">
+                                                    <input type="radio" name="gender" class="form-check-input" value="male" id="gender_male" />
+                                                    <label for="gender_male" class="form-check-label">Male</label>
+                                                </div>
+                                                <div class="form-check-inline ms-3">
+                                                    <input type="radio" name="gender" class="form-check-input" value="female" id="gender_female" />
+                                                    <label for="gender_female" class="form-check-label">Female</label>
+                                                </div>
+                                                <div class="form-check-inline ms-3">
+                                                    <input type="radio" name="gender" class="form-check-input" value="others" id="gender_others" />
+                                                    <label for="gender_others" class="form-check-label">Others</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Dob date -->
+                                        <div class="col-md-6">
+                                            <label for="dob" class="form-label">Date of Birth <span class="text-danger">*</span></label>
+                                            <input type="date" id="dob" name="dob" class="form-control" required />
+                                            <div class="invalid-feedback">Give your DOB</div>
+                                        </div>
+                                    </div>
+                                    <!-- Email and Mobile grid -->
+                                    <div class="row g-2 mb-2">
+                                        <!-- Email -->
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter Your Email address" required />
+                                            </div>
+                                            <div class="valid-feedback">Looks Good</div>
+                                            <div class="invalid-feedback">Enter your email</div>
+                                        </div>
+                                        <!-- Mobile no -->
+                                        <div class="col-md-6">
+                                            <label for="mobileNo" class="form-label">Mobile No. <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <small class="input-group-text">+91</small>
+                                                <input type="number" id="mobileNo" name="mobile" class="form-control" placeholder="Enter Your Mobile number" required />
+                                                <div class="invalid-feedback">Please Give your Mobile no.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Password grid -->
+                                    <div class="row g-2 mb-2">
+                                        <!-- create password -->
+                                        <div class="col-md-6">
+                                            <label for="create_password" class="form-label">Create Password <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                                <input type="password" name="password" class="form-control" id="create_password" placeholder="Create Your Password" required />
+                                            </div>
+                                            <div class="invalid-feedback">Create password</div>
+                                        </div>
+                                        <!-- Confirm password -->
+                                        <div class="col-md-6">
+                                            <label for="confirm_password" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                                <input type="password" id="confirm_password" name="password" class="form-control" placeholder="Confirm Your Password" required />
+                                            </div>
+                                            <div class="invalid-feedback">Confirm password</div>
+                                        </div>
+                                        <div class="form-text">Your password has atleast 8 characters must be one capital letter, one small letter, numbers and special characters.</div>
+                                    </div>
+                                    <!-- Occupation select -->
+                                    <div class="mb-2">
+                                        <label for="work">Occupation <span class="text-muted">(Optional)</span></label>
+                                        <select name="work" id="work" class="form-select">
+                                            <option selected>-- Select --</option>
+                                            <option value="employee">Employee in a company</option>
+                                            <option value="entreprenur">Entreprenur</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                    <!-- source select -->
+                                    <div class="mb-2">
+                                        <label for="source">Where you can find? <span class="text-muted">(Optional)</span></label>
+                                        <select name="source" id="source" class="form-select">
+                                            <option selected>-- Select Source --</option>
+                                            <option value="Google">Google</option>
+                                            <option value="Facebook">Facebook</option>
+                                            <option value="Youtube">Youtube</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                    <!-- Checkbox -->
+                                    <div class="mb-4">
+                                        <input type="checkbox" id="checkBox" name="checkBox" class="form-check-input" required />
+                                        <label for="checkBox" class="form-check-label">I agree to the <a href="#modalExample" data-bs-toggle="modal">Terms and Conditions</a></label>
+                                        <div class="invalid-feedback">Plese read and check this terms and coditions</div>
+                                        <div class="form-text">We'll never share your email and mobile number with anyone else.</div>
+                                        <!-- Modal -->
+                                        <div class="modal" id="modalExample" data-bs-backdrop="static">
+                                            <!-- Modal dialog -->
+                                            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                                                <!-- Modal content -->
+                                                <div class="modal-content">
+                                                    <!-- Modal header -->
+                                                    <div class="modal-header">
+                                                        <h3 class="modal-title">Terms and Conditions</h3>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <h6 class="text-warning">Please read the Following Terms and Conditions</h6>
+                                                        <ol>
+                                                            <li>Modals have all the HTML elemnts.</li>
+                                                            <li>They are Table, grid layout, flexbox, list, quote, buttons etc.,</li>
+                                                            <li>Inside the modal we give another modal button in the footer.</li>
+                                                            <li>Also give Tooltip and popover inside the modal</li>
+                                                            <li>Voluptates itaque ducimus ab est praesentium dolore tenetur vel debitis optio enim saepe, pariatur maiores.</li>
+                                                            <li>Sapiente sit, aspernatur quia iure perspiciatis sed cum. Aliquam enim aperiam natus et, aliquid quibusdam vel recusandae eius vero quae ad omnis?</li>
+                                                            <li>Reprehenderit suscipit quaerat id iste fugit et veniam ea dicta modi. Consectetur, facilis modi maiores harum accusantium adipisci voluptatem illo repellat ea?</li>
+                                                            <li>Quas, quidem ad magnam ipsam placeat expedita id dolorum labore earum ipsum dolor? Eos maxime ullam deserunt rerum.</li>
+                                                            <li>Explicabo fugiat perspiciatis incidunt sunt tenetur error ducimus? Illum officia perspiciatis ad amet aut quo, maiores, aliquid vitae assumenda animi facilis unde.</li>
+                                                            <li>Ad, eum fugit totam eos, tempora nulla alias unde, doloremque ipsam voluptate sunt similique? Architecto perspiciatis animi et ex. Neque, necessitatibus laborum?</li>
+                                                        </ol>
+                                                    </div>
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Form buttons -->
+                                    <div class="mb-2 row justify-content-center">
+                                        <button type="reset" class="btn btn-danger col-5 me-3 btn-reset"><i class="fa fa-retweet pe-2"></i> Reset</button>
+                                        <button type="submit" class="btn btn-success col-5 btn-register"><i class="fa fa-external-link-alt pe-2"></i> Register</button>
+                                    </div>
+                                    <!-- Form link -->
+                                    <div class="text-center mb-2">
+                                        <a href="/pages/login.html">Already have an account?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            // Form validation (new and easier to read)
+            (() => {
+                "use strict";
+                // Fetch all the forms we want to apply custom Bootstrap validation styles
+                const forms = document.getElementsByTagName("form");
+                // Loop over them and prevent submission
+                Array.from(forms).forEach((form) => {
+                    form.addEventListener(
+                        "submit",
+                        (event) => {
+                            if (!form.checkValidity()) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add("was-validated");
+                        },
+                        false
+                    );
+                });
+            })();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+/* Home and About page */
+#toggler-btn:hover {
+    background: #053cf1;
+}
+.nav-link {
+    position: relative;
+}
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+.nav-link:hover::before {
+    width: 100%;
+}
+
+/* Login Form */
+#login-body {
+    background: url(/assets/3334896.jpg) no-repeat center / cover;
+    height: auto;
+}
+#bg-image {
+    background: url(/assets/download.jpg) no-repeat center / cover;
+}
+.btn {
+    transition-duration: 0.6s;
+    transition-timing-function: linear;
+}
+.btn-success:hover {
+    box-shadow: 350px 0 0 #005326 inset;
+}
+.btn-fb:hover {
+    box-shadow: -350px 0 0 #002163 inset;
+}
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(40) normal;
+    width: 100%;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Register page */
+#register-body {
+    background: linear-gradient(135deg, rgba(36, 35, 80, 1) 0%, rgba(44, 71, 87, 1) 100%);
+}
+#main-container {
+    background: url(/assets/images.jpg) no-repeat center / cover;
+}
+.btn-reset {
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in;
+    box-shadow: 0px 0px 0 #b42626 inset, 0px 0px 0 #b42626 inset;
+}
+.btn-register {
+    transition-duration: 0.8s;
+    transition-timing-function: ease-out;
+    box-shadow: 150px 0px 0 #115c30 inset, -150px 0px 0 #115c30 inset;
+}
+.btn-reset:hover {
+    box-shadow: 150px 0px 0 0px #b42626 inset, -150px 0px 0 0px #b42626 inset;
+}
+.btn-register:hover {
+    box-shadow: 0px 0px 0 0px #115c30 inset, 0px 0px 0 0px #115c30 inset;
+}
