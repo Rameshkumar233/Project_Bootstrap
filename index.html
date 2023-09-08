@@ -24,18 +24,18 @@
                 <div class="container-lg">
                     <div class="d-flex align-items-center" id="flex-direction">
                         <input type="search" class="form-control" placeholder="Search" />
-                        <button class="btn btn-light btn-outline-secondary ms-1 d-flex align-items-center"><i class="fa fa-search me-2"></i>Search</button>
+                        <button class="btn btn-light btn-outline-secondary ms-1 d-flex align-items-center"><i class="fa fa-search me-1"></i>Search</button>
                     </div>
                     <button type="button" id="toggler-btn" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navBarMenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navBarMenu">
+                    <div class="collapse navbar-collapse " id="navBarMenu">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
                             <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                            <li class="nav-item"><a href="login.html" class="nav-link">Log in</a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link text-nowrap">Log in</a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Help</a>
                                 <ul class="dropdown-menu">
@@ -65,7 +65,7 @@
                             applied to HTML elements. <br />
                             <a href="login.html" class="text-decoration-none">Learn more...</a>
                         </div>
-                        <div class="p-3 position-absolute card-footer bottom-0 end-0">
+                        <div>
                             <a href="Register.html" class="btn btn-lg btn-outline-success float-end ">Register as New User</a>
                         </div>
                     </div>
@@ -111,22 +111,5 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            const navBarToggler = document.querySelector("#toggler-btn");
-            const navBarMenu = document.querySelector("#navBarMenu");
-            window.onload, window.onresize = () => {
-                let currentScreenWidth = window.innerWidth;
-                if (currentScreenWidth < 400) {
-                    navBarToggler.style.display = "none";
-                    navBarMenu.classList.remove("navbar-collapse");
-                    navBarMenu.style.display = "inline-flex";
-                } else {
-                    navBarToggler.style.display = "";
-                    navBarMenu.classList.add("navbar-collapse");
-                    navBarMenu.style.display = "";
-                }
-            };
-        </script>
     </body>
 </html>
